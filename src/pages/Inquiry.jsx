@@ -65,22 +65,22 @@ export default function Inquiry() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
         {/* Left Side: Cinematic Header */}
         <div className="lg:col-span-5 lg:sticky lg:top-40">
-          <div className="space-y-8">
-            <h1 className="font-display-lg text-headline-lg lg:text-display-lg text-primary leading-tight">
+          <div className="space-y-6 sm:space-y-8">
+            <h1 className="font-display-lg text-4xl sm:text-5xl lg:text-display-lg text-primary leading-tight">
               Let's Create <br />Something <br />Beautiful
             </h1>
             <div className="w-16 h-[2px] bg-primary/40"></div>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+            <p className="font-body-lg text-base sm:text-body-lg text-on-surface-variant max-w-md">
               Every frame is a legacy. Share your vision with us, and let's craft a cinematic narrative of your most cherished moments.
             </p>
-            <div className="flex gap-8 pt-6">
+            <div className="flex gap-8 pt-4 sm:pt-6">
               <a className="group flex items-center gap-3" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                 <span className="w-10 h-10 border border-primary/30 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background transition-all duration-300">
                   <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                     photo_camera
                   </span>
                 </span>
-                <span className="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant group-hover:text-primary transition-colors">
+                <span className="font-label-md text-xs sm:text-label-md uppercase tracking-widest text-on-surface-variant group-hover:text-primary transition-colors">
                   Instagram
                 </span>
               </a>
@@ -90,7 +90,7 @@ export default function Inquiry() {
                     videocam
                   </span>
                 </span>
-                <span className="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant group-hover:text-primary transition-colors">
+                <span className="font-label-md text-xs sm:text-label-md uppercase tracking-widest text-on-surface-variant group-hover:text-primary transition-colors">
                   Facebook
                 </span>
               </a>
@@ -99,9 +99,9 @@ export default function Inquiry() {
         </div>
 
         {/* Right Side: Inquiry Form */}
-        <div className="lg:col-span-7 bg-surface-container-lowest/50 p-8 md:p-12 border border-outline-variant/20 gold-border-glow">
-          <form onSubmit={handleSubmit} className="space-y-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+        <div className="lg:col-span-7 bg-surface-container-lowest/50 p-6 sm:p-8 md:p-12 border border-outline-variant/20 gold-border-glow">
+          <form onSubmit={handleSubmit} className="space-y-8 sm:space-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 sm:gap-y-10">
               {/* Name */}
               <div className="relative">
                 <input
@@ -116,7 +116,7 @@ export default function Inquiry() {
                 />
                 <label
                   htmlFor="name"
-                  className="absolute left-0 top-0 font-label-md text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-label-md peer-focus:text-primary"
+                  className="absolute left-0 top-0 font-label-md text-xs sm:text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-sm sm:peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-xs sm:peer-focus:text-label-md peer-focus:text-primary"
                 >
                   Full Name
                 </label>
@@ -136,7 +136,7 @@ export default function Inquiry() {
                 />
                 <label
                   htmlFor="email"
-                  className="absolute left-0 top-0 font-label-md text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-label-md peer-focus:text-primary"
+                  className="absolute left-0 top-0 font-label-md text-xs sm:text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-sm sm:peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-xs sm:peer-focus:text-label-md peer-focus:text-primary"
                 >
                   Email Address
                 </label>
@@ -156,7 +156,7 @@ export default function Inquiry() {
                 />
                 <label
                   htmlFor="phone"
-                  className="absolute left-0 top-0 font-label-md text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-label-md peer-focus:text-primary"
+                  className="absolute left-0 top-0 font-label-md text-xs sm:text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-sm sm:peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-xs sm:peer-focus:text-label-md peer-focus:text-primary"
                 >
                   Phone Number
                 </label>
@@ -176,7 +176,7 @@ export default function Inquiry() {
                 />
                 <label
                   htmlFor="date"
-                  className="absolute left-0 top-0 font-label-md text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-label-md peer-focus:text-primary"
+                  className="absolute left-0 top-0 font-label-md text-xs sm:text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-sm sm:peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-xs sm:peer-focus:text-label-md peer-focus:text-primary"
                 >
                   Event Date
                 </label>
@@ -196,7 +196,7 @@ export default function Inquiry() {
                 />
                 <label
                   htmlFor="venue"
-                  className="absolute left-0 top-0 font-label-md text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-label-md peer-focus:text-primary"
+                  className="absolute left-0 top-0 font-label-md text-xs sm:text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-sm sm:peer-placeholder-shown:text-body-md peer-focus:top-0 peer-focus:text-xs sm:peer-focus:text-label-md peer-focus:text-primary"
                 >
                   Venue Location
                 </label>
@@ -220,7 +220,7 @@ export default function Inquiry() {
                 </select>
                 <label
                   htmlFor="guests"
-                  className="absolute left-0 top-0 font-label-md text-label-md uppercase tracking-widest text-primary"
+                  className="absolute left-0 top-0 font-label-md text-xs sm:text-label-md uppercase tracking-widest text-primary"
                 >
                   Guest Count
                 </label>
@@ -244,7 +244,7 @@ export default function Inquiry() {
                 </select>
                 <label
                   htmlFor="budget"
-                  className="absolute left-0 top-0 font-label-md text-label-md uppercase tracking-widest text-primary"
+                  className="absolute left-0 top-0 font-label-md text-xs sm:text-label-md uppercase tracking-widest text-primary"
                 >
                   Budget Range
                 </label>
@@ -264,17 +264,17 @@ export default function Inquiry() {
               ></textarea>
               <label
                 htmlFor="message"
-                className="absolute left-0 top-6 font-label-md text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-12 peer-placeholder-shown:text-body-md peer-focus:top-6 peer-focus:text-label-md peer-focus:text-primary"
+                className="absolute left-0 top-6 font-label-md text-xs sm:text-label-md uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-12 peer-placeholder-shown:text-sm sm:peer-placeholder-shown:text-body-md peer-focus:top-6 peer-focus:text-xs sm:peer-focus:text-label-md peer-focus:text-primary"
               >
                 Tell us about your story...
               </label>
             </div>
 
-            <div className="pt-6">
+            <div className="pt-4">
               <button
                 type="submit"
                 disabled={status.submitting}
-                className={`w-full md:w-auto px-16 py-4 font-label-md text-label-md uppercase tracking-widest font-bold transition-all duration-300 transform active:scale-95 shadow-lg ${
+                className={`w-full md:w-auto px-16 py-4 font-label-md text-xs sm:text-label-md uppercase tracking-widest font-bold transition-all duration-300 transform active:scale-95 shadow-lg ${
                   status.success
                     ? 'bg-green-600 text-white'
                     : 'bg-primary text-background hover:bg-primary-container shadow-primary/10'

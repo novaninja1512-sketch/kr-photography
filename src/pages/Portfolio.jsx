@@ -80,15 +80,15 @@ export default function Portfolio() {
   return (
     <main className="pt-32 pb-section-gap">
       {/* Header & Filters */}
-      <header className="px-gutter max-w-container-max mx-auto mb-20 text-center">
-        <h1 className="font-display-lg text-display-lg text-on-background mb-6">The Gallery</h1>
+      <header className="px-gutter max-w-container-max mx-auto mb-16 sm:mb-20 text-center">
+        <h1 className="font-display-lg text-4xl sm:text-5xl md:text-display-lg text-on-background mb-6">The Gallery</h1>
         <div className="w-10 h-[1px] bg-primary/40 mx-auto mb-12"></div>
-        <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
+        <div className="flex flex-wrap justify-center gap-x-6 sm:gap-x-10 gap-y-4 px-4">
           {FILTERS.map(filter => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`relative font-label-md text-label-md uppercase tracking-[0.2em] transition-colors py-2 ${
+              className={`relative font-label-md text-xs sm:text-label-md uppercase tracking-[0.2em] transition-colors py-2 ${
                 activeFilter === filter
                   ? "text-primary filter-active"
                   : "text-on-surface-variant hover:text-primary"
@@ -120,15 +120,15 @@ export default function Portfolio() {
                     src={item.src}
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 backdrop-blur-[2px]">
-                  <p className="font-label-md text-label-md text-primary mb-2 uppercase tracking-widest">
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 sm:p-8 backdrop-blur-[2px]">
+                  <p className="font-label-md text-xs sm:text-label-md text-primary mb-2 uppercase tracking-widest">
                     {item.location}
                   </p>
-                  <h3 className="font-headline-md text-headline-md text-on-background">
+                  <h3 className="font-headline-md text-lg sm:text-headline-md text-on-background">
                     {item.title}
                   </h3>
                   {item.desc && (
-                    <p className="font-body-md text-on-surface-variant mt-2 italic">{item.desc}</p>
+                    <p className="font-body-md text-xs sm:text-body-md text-on-surface-variant mt-2 italic">{item.desc}</p>
                   )}
                 </div>
               </div>
@@ -138,9 +138,9 @@ export default function Portfolio() {
       </section>
 
       {/* Quote Section */}
-      <section className="section-gap px-gutter max-w-[800px] mx-auto text-center mt-24">
+      <section className="section-gap px-gutter max-w-[800px] mx-auto text-center mt-20 sm:mt-24">
         <div className="w-10 h-[1px] bg-primary mb-8 mx-auto"></div>
-        <p className="font-quote text-quote text-on-background italic mb-8">
+        <p className="font-quote text-lg sm:text-quote text-on-background italic mb-8 leading-relaxed">
           "Photography is not about capturing a moment, it's about preserving a legacy. Every frame we craft is a testament to the grandeur of your love story."
         </p>
         <div className="w-10 h-[1px] bg-primary mb-8 mx-auto"></div>

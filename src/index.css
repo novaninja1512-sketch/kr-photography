@@ -1,6 +1,18 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+:root {
+  --gutter: 16px;
+  --section-gap: 64px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+    --section-gap: 160px;
+  }
+}
+
 .ken-burns {
     animation: kenburns 20s infinite alternate;
 }
@@ -35,19 +47,25 @@
 .gold-border-glow:focus-within {
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
 }
+
 .masonry-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 32px;
+    gap: 16px;
 }
-.masonry-item-portrait { grid-column: span 4; }
-.masonry-item-landscape { grid-column: span 8; }
-.masonry-item-square { grid-column: span 6; }
-@media (max-width: 768px) {
-    .masonry-item-portrait, .masonry-item-landscape, .masonry-item-square {
-        grid-column: span 12;
+.masonry-item-portrait { grid-column: span 12; }
+.masonry-item-landscape { grid-column: span 12; }
+.masonry-item-square { grid-column: span 12; }
+
+@media (min-width: 768px) {
+    .masonry-grid {
+        gap: 32px;
     }
+    .masonry-item-portrait { grid-column: span 4; }
+    .masonry-item-landscape { grid-column: span 8; }
+    .masonry-item-square { grid-column: span 6; }
 }
+
 .image-zoom-container:hover img {
     transform: scale(1.05);
 }

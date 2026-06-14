@@ -63,8 +63,8 @@ export default {
         full: "9999px"
       },
       spacing: {
-        gutter: "32px",
-        "section-gap": "160px",
+        gutter: "var(--gutter)",
+        "section-gap": "var(--section-gap)",
         "margin-desktop": "80px",
         "container-max": "1440px",
         "margin-mobile": "24px"

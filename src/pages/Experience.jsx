@@ -57,16 +57,16 @@ export default function Experience() {
     <main className="pt-32">
       {/* Hero Section */}
       <section className="px-gutter mb-section-gap max-w-container-max mx-auto">
-        <div className="relative w-full aspect-[16/7] overflow-hidden">
+        <div className="relative w-full aspect-[4/3] sm:aspect-[16/7] overflow-hidden">
           <img
             alt="The K.R. Experience"
             className="w-full h-full object-cover scale-110 transition-transform duration-[40s] ease-out animate-[kenburns_40s_infinite_alternate]"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHrcqOVWih3h7HKqsfh3YPWtHj4HsdLoQ7_ficMkFeZSAdD-rC7PaYntutv3ilh8WlY0bzhNZg_ag33X2zAPPZom-oSqWmp0A7Hzn8yM6-ryLmDGgZVxgSpgrtFtPUeV3o4UpfV2ajiXyZFrgV56ZVTIPuf7NSc7MwaoWFjJELabLU-WsstrJ3bNMALofjwticaGM6Iu8xxKKadKaz6ul1mrvZ_rchsNq3JENTAYQ2ihlUKfb54AqJWA"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-          <div className="absolute bottom-12 left-12">
-            <h1 className="font-display-lg text-display-lg text-primary mb-2">The K.R. Experience</h1>
-            <p className="font-label-md text-label-md uppercase tracking-[0.3em] text-on-surface-variant">
+          <div className="absolute bottom-6 left-6 sm:bottom-12 sm:left-12">
+            <h1 className="font-display-lg text-3xl sm:text-5xl md:text-display-lg text-primary mb-2">The K.R. Experience</h1>
+            <p className="font-label-md text-xs sm:text-label-md uppercase tracking-[0.3em] text-on-surface-variant">
               A Journey Through Timeless Artistry
             </p>
           </div>
@@ -78,16 +78,16 @@ export default function Experience() {
         ref={el => scrollRefs.current[0] = el}
         className="px-gutter mb-section-gap max-w-container-max mx-auto scroll-reveal"
       >
-        <div className="text-center mb-24">
+        <div className="text-center mb-16 sm:mb-24">
           <span className="font-label-md text-label-md uppercase tracking-[0.5em] text-primary-container mb-4 block">
             The Process
           </span>
-          <h2 className="font-headline-lg text-headline-lg text-on-surface">Crafting Your Legacy</h2>
+          <h2 className="font-headline-lg text-3xl md:text-headline-lg text-on-surface">Crafting Your Legacy</h2>
         </div>
-        <div className="relative">
+        <div className="relative px-2">
           {/* Vertical Line (Desktop) */}
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-primary/20 hidden md:block"></div>
-          <div className="space-y-32">
+          <div className="space-y-16 md:space-y-32">
             {TIMELINE_STEPS.map((step, idx) => {
               const isEven = idx % 2 === 1;
               return (
@@ -98,17 +98,17 @@ export default function Experience() {
                   }`}
                 >
                   <div className={`w-full md:w-[45%] text-center ${isEven ? "md:text-left" : "md:text-right"}`}>
-                    <span className="font-display-lg text-label-md text-primary/40 block mb-2 font-bold tracking-widest">
+                    <span className="font-display-lg text-sm sm:text-label-md text-primary/40 block mb-2 font-bold tracking-widest">
                       Step {step.step}
                     </span>
-                    <h3 className="font-headline-md text-headline-md text-primary mb-4">
+                    <h3 className="font-headline-md text-xl sm:text-headline-md text-primary mb-4">
                       {step.title}
                     </h3>
-                    <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
-                  <div className="w-8 h-8 rounded-full border-2 border-primary bg-background z-10 flex items-center justify-center my-8 md:my-0">
+                  <div className="w-8 h-8 rounded-full border-2 border-primary bg-background z-10 hidden md:flex items-center justify-center my-8 md:my-0">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                   </div>
                   <div className="w-full md:w-[45%]"></div>
@@ -133,20 +133,20 @@ export default function Experience() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgOg93tg0TMrPUEIa1Q141gj0ZMXR8BLszNgfnRknJ66sAOmgRDUcGyQD9nxULP_s5X_P-1kOHYAJ5YW_07LED2M5x1-FEP4BxmG4UpIWs_Ra4eAnHhucoXPG3vrbx_7DJ8ANUqWL3VTwC62BWrzzRJicP8XkJwy0zFLnAMkBle9EHdQJYT0IlckSvFER61MPiM0gk2Ub-ROzPVVJja4qVdswSOBmjHww35_lZwGys1j9JREjqwLN_vQ"
             />
             <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-all duration-500"></div>
-            <div className="absolute bottom-0 left-0 w-full p-12 bg-gradient-to-t from-background to-transparent">
-              <span className="font-label-md text-label-md text-primary uppercase tracking-widest mb-4 block">
+            <div className="absolute bottom-0 left-0 w-full p-6 sm:p-12 bg-gradient-to-t from-background to-transparent">
+              <span className="font-label-md text-xs sm:text-label-md text-primary uppercase tracking-widest mb-4 block">
                 Cinematic Artistry
               </span>
-              <h3 className="font-display-lg text-headline-lg text-on-surface mb-6">Wedding Films</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-8 max-w-sm">
+              <h3 className="font-display-lg text-2xl sm:text-headline-lg text-on-surface mb-6">Wedding Films</h3>
+              <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant mb-8 max-w-sm">
                 Every glance, every whisper, captured in 4K resolution with the grain and texture of true cinema.
               </p>
               <Link
                 to="/portfolio"
-                className="inline-flex items-center gap-2 font-label-md text-label-md text-primary uppercase tracking-widest group/link"
+                className="inline-flex items-center gap-2 font-label-md text-xs sm:text-label-md text-primary uppercase tracking-widest group/link"
               >
                 Explore Collections
-                <span className="material-symbols-outlined group-hover/link:translate-x-2 transition-transform">
+                <span className="material-symbols-outlined group-hover/link:translate-x-2 transition-transform text-sm sm:text-base">
                   arrow_forward
                 </span>
               </Link>
@@ -160,20 +160,20 @@ export default function Experience() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuD87vpGUI_8x0p1uyd_WG8hTPb-NypMx5le6RFb5Vgu1KsOxa_mCjpa6S0k46lodSnmHiZaA5zXQZmKML1PH-E0DQ0mQN5_JWHd4vhQZCbzXEIqcO7VE-lAxb9gZtakq9r7vBZd1QT-WPkBEykXA9uV96cdPAmfRDe2_a04CzlrvnFU8uyDgS1wNwHJomcq4N72F8FDNQexudpwNQCS_WxtpFjB5jPNsA8LA7qhUgZf54G6hN_vF1InoQ"
             />
             <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-all duration-500"></div>
-            <div className="absolute bottom-0 left-0 w-full p-12 bg-gradient-to-t from-background to-transparent">
-              <span className="font-label-md text-label-md text-primary uppercase tracking-widest mb-4 block">
+            <div className="absolute bottom-0 left-0 w-full p-6 sm:p-12 bg-gradient-to-t from-background to-transparent">
+              <span className="font-label-md text-xs sm:text-label-md text-primary uppercase tracking-widest mb-4 block">
                 Static Poetry
               </span>
-              <h3 className="font-display-lg text-headline-lg text-on-surface mb-6">Bridal Portraits</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-8 max-w-sm">
+              <h3 className="font-display-lg text-2xl sm:text-headline-lg text-on-surface mb-6">Bridal Portraits</h3>
+              <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant mb-8 max-w-sm">
                 Freezing a moment in time. Heirloom quality portraits that honor heritage and modern elegance.
               </p>
               <Link
                 to="/portfolio"
-                className="inline-flex items-center gap-2 font-label-md text-label-md text-primary uppercase tracking-widest group/link"
+                className="inline-flex items-center gap-2 font-label-md text-xs sm:text-label-md text-primary uppercase tracking-widest group/link"
               >
                 View Gallery
-                <span className="material-symbols-outlined group-hover/link:translate-x-2 transition-transform">
+                <span className="material-symbols-outlined group-hover/link:translate-x-2 transition-transform text-sm sm:text-base">
                   arrow_forward
                 </span>
               </Link>
@@ -189,13 +189,13 @@ export default function Experience() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-12 h-px bg-outline mx-auto mb-12"></div>
-          <h2 className="font-quote text-quote italic mb-12 leading-relaxed">
+          <h2 className="font-quote text-lg sm:text-xl md:text-quote italic mb-12 leading-relaxed">
             "K.R. didn't just film our wedding; they captured the invisible threads of emotion that we felt but couldn't describe. Looking at the portraits is like stepping back into that dream. It is the most beautiful investment we've ever made."
           </h2>
           <div className="w-12 h-px bg-outline mx-auto mb-8"></div>
           <div className="space-y-2">
             <p className="font-label-md text-label-md uppercase tracking-widest font-bold">The Kapoor Family</p>
-            <p className="font-body-md text-body-md opacity-70">New Delhi • Summer 2023</p>
+            <p className="font-body-md text-sm sm:text-body-md opacity-70">New Delhi • Summer 2023</p>
           </div>
         </div>
       </section>
@@ -205,21 +205,21 @@ export default function Experience() {
         ref={el => scrollRefs.current[3] = el}
         className="py-section-gap px-gutter text-center scroll-reveal"
       >
-        <div className="max-w-2xl mx-auto">
-          <h2 className="font-headline-lg text-headline-lg text-primary mb-8">Ready to tell your story?</h2>
-          <p className="font-body-lg text-body-lg text-on-surface-variant mb-12">
+        <div className="max-w-2xl mx-auto px-4">
+          <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-primary mb-8">Ready to tell your story?</h2>
+          <p className="font-body-lg text-base sm:text-body-lg text-on-surface-variant mb-12">
             We take a limited number of commissions each year to ensure the highest standard of artistic integrity for every couple.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               to="/inquire"
-              className="px-12 py-5 border border-primary text-primary font-label-md uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary-fixed transition-all duration-300"
+              className="px-12 py-5 border border-primary text-primary font-label-md text-xs sm:text-label-md uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 w-full sm:w-auto text-center"
             >
               Inquire Now
             </Link>
             <Link
               to="/portfolio"
-              className="px-12 py-5 bg-surface-container-high border border-outline-variant text-on-surface font-label-md uppercase tracking-[0.2em] hover:border-primary transition-all duration-300"
+              className="px-12 py-5 bg-surface-container-high border border-outline-variant text-on-surface font-label-md text-xs sm:text-label-md uppercase tracking-[0.2em] hover:border-primary transition-all duration-300 w-full sm:w-auto text-center"
             >
               View Portfolio
             </Link>
